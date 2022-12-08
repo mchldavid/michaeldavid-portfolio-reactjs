@@ -1,0 +1,26 @@
+//css reset
+@use "reset";
+@use "../abstract" as *;
+
+//google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// Font Variables
+$roboto: 'Roboto', sans-serif; 
+
+// Styles
+body {
+  font-family: $roboto;
+  font-weight: 400;
+  background-color: $color-1;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.screen-visible-only{
+  position: absolute;
+  width: 0;
+  height: 0;
+}

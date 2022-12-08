@@ -1,0 +1,63 @@
+@use "../../abstract/" as *;
+
+.header {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+  width: 100vw;
+  height: 6rem;
+  z-index: 1000;
+
+  & nav {
+    padding: $padding;
+    max-width: $max-w-val;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & .navigation {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      position: relative;
+      padding: 5px;
+      gap: 2rem;
+
+      & .indicator {
+        background-color: $color-2;
+        width: 55px;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        transition: all $time ease-in-out;
+      }
+
+      & li {
+        & .active {
+          color: $color-2;
+        }
+
+        & a {
+          font-size: 1rem;
+          color: $color-0;
+          text-decoration: none;
+          transition: all $time ease;
+
+          &:hover {
+            color: $color-2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../abstract/" as *;
+
+.footer-section{
+  height: 6rem;
+}
+
+.footer-bg{
+  background-color: $color-3;
+  width: 100vw;
+  height: 100%;
+}
