@@ -1,0 +1,9 @@
+@mixin default-box-shadow{
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, .3));
+}
+
+@mixin set-background-color($color-value){
+  background-color: $color-value;
+  width: 100vw;
+  height: 100%;
+}

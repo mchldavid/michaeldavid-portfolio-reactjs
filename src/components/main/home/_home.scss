@@ -1,5 +1,110 @@
 @use "../../../abstract" as *;
 
-.home-section{
+.home-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 1000px;
 
+  & .left-grid {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    & div h1 {
+      font-weight: 900;
+      color: $color-2;
+      margin: 10px 0px;
+    }
+
+    & p {
+      margin: 10px 0px;
+      max-width: 25rem;
+      line-height: 1.2rem;
+    }
+
+    & h3 {
+      font-weight: 100;
+      max-width: 20rem;
+      color: $color-2;
+    }
+  }
+
+  & .right-grid {
+    display: flex;
+    justify-content: flex-end;
+
+    & div {
+      width: 320px;
+      height: 476px;
+      position: relative;
+
+      & div {
+        overflow: hidden;
+        @include default-box-shadow;
+
+        & img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        z-index: 1;
+        transform: translate(20px, 20px);
+        border: 2px solid $color-2;
+        background: transparent;
+      }
+    }
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.wid-bg {
+  position: relative;
+  @include set-background-color($color-1);
+
+  & .curve {
+    top: -100px;
+    left: -10px;
+    right: -10px;
+    z-index: -1;
+    position: absolute;
+    transform: rotateX(180deg);
+
+    & svg {
+      height: 100px;
+      width: 100%;
+      & path {
+        stroke-width: 3;
+        stroke: $color-2;
+
+        fill: $color-1;
+      }
+    }
+  }
+
+  & .wid-section {
+    & h3 {
+      font-weight: 500;
+    }
+    & div {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+      padding: 50px 0px;
+
+      & h5 {
+        max-width: 500px;
+        font-weight: 300;
+        color: $color-2;
+      }
+    }
+  }
 }

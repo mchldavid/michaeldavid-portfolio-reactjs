@@ -3,24 +3,58 @@
 @use "../abstract" as *;
 
 //google fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 // Font Variables
-$roboto: 'Roboto', sans-serif; 
+$roboto: "Roboto", sans-serif;
 
 // Styles
 body {
   font-family: $roboto;
-  font-weight: 400;
+  font-weight: 300;
   background-color: $color-1;
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
+  color: $color-0;
+  ;
+  
 }
 
-.screen-visible-only{
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+
+.screen-visible-only {
   position: absolute;
   width: 0;
   height: 0;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.radius{
+  border-radius: 40px;
+}
+
+.filter-sepia{
+  filter: sepia(50%);
 }

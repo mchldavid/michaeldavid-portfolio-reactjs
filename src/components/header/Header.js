@@ -3,6 +3,7 @@ import "./header.scss"
 
 const Navbar = () => {
   const defaultIndicator = (indicator, getActiveLink, aIndex, h, listNav) => {
+    
     //set default Indicator
     var _bool = false
     if (h !== "")

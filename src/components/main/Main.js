@@ -7,7 +7,6 @@ import About from "./about/About"
 import palettes from "../../json/palettes.json"
 import Projects from "./projects/Projects"
 import Experience from "./experience/Experience"
-import Skills from "./skills/Skills"
 import Contact from "./contact/Contact"
 
 import "./main.scss"
@@ -19,20 +18,21 @@ const Main = () => {
   const winListen = () => {
     let cnvsParticle1 = document.querySelector(`#${topClassParticlesID}`)
     let cnvsParticle2 = document.querySelector(`#${bottomClassParticlesID}`)
-    let contact_el = document.querySelector("#contact")
+    let about_el = document.querySelector("#experience")
 
-    //find the position and height of contact element to set the particles2 position properly to make a parallax effect
-    let COffsetTop = contact_el.offsetTop
-    let computedInnerHeight = window.getComputedStyle(contact_el).height
+    //find the position and height of about element to set the particles2 position properly to make a parallax effect
+    let aboutOffsetTop = about_el.getBoundingClientRect().top
+    let computedInnerHeight = window.getComputedStyle(about_el).height
     computedInnerHeight = computedInnerHeight.substring(
       0,
       computedInnerHeight.indexOf("px")
-    ) 
+    )
     computedInnerHeight = parseInt(computedInnerHeight) + 50
 
-    // set the Y particles2 to #contact by default from fixed position
+    console.log('offsettop',aboutOffsetTop)
+    // // set the Y particles2 to #contact by default from fixed position
     cnvsParticle2.style.transform = `translateY(${
-      COffsetTop - computedInnerHeight
+      aboutOffsetTop - computedInnerHeight
     }px)`
 
     window.addEventListener("scroll", () => {
@@ -42,14 +42,16 @@ const Main = () => {
       cnvsParticle1.style.transform = `translateY(-${value / 30}px)`
 
       // set the parallax effect on particles2
-      if (window.innerHeight >= contact_el.getBoundingClientRect().top) {
+      if (window.innerHeight >= about_el.getBoundingClientRect().top) {
         cnvsParticle2.style.transform = `translateY(${
           window.innerHeight - computedInnerHeight - value / 30
         }px)`
-      } else
+      } else {
+        console.log("test")
         cnvsParticle2.style.transform = `translateY(${
-          COffsetTop - computedInnerHeight - value
+          aboutOffsetTop - computedInnerHeight - value
         }px)`
+      }
     })
   }
 
@@ -58,7 +60,7 @@ const Main = () => {
   }, [])
 
   return (
-    <main className="wrapper">
+    <main>
       <ParticlesBG
         id={topClassParticlesID}
         color={palettes.Themes.Color.clr2}
@@ -72,10 +74,9 @@ const Main = () => {
         bgColor={palettes.Themes.Color.clr1}
       />
       <Home />
-      <About />
       <Projects />
       <Experience />
-      <Skills />
+      <About />
       <Contact />
     </main>
   )
