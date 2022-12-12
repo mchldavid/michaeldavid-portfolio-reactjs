@@ -3,14 +3,24 @@
 .home-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 1000px;
+  min-height: 800px;
 
   & .left-grid {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+
+    & .social-icons{
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+
+      & svg{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     & div h1 {
-      font-weight: 900;
       color: $color-2;
       margin: 10px 0px;
     }
@@ -18,10 +28,9 @@
     & p {
       margin: 10px 0px;
       max-width: 25rem;
-      line-height: 1.2rem;
     }
 
-    & h3 {
+    & h4 {
       font-weight: 100;
       max-width: 20rem;
       color: $color-2;
@@ -66,7 +75,7 @@
   }
 }
 
-.wid-bg {
+.whatido-bg {
   position: relative;
   @include set-background-color($color-1);
 
@@ -90,20 +99,41 @@
     }
   }
 
-  & .wid-section {
-    & h3 {
-      font-weight: 500;
+  & .whatido-section {
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+
+    & h1 {
+      width: 280px;
+
+      & span{
+        color: $color-2;
+      }
     }
+    
     & div {
       display: flex;
-      max-width: 100%;
       justify-content: center;
-      padding: 50px 0px;
+      flex-direction: column;
+      width: 300px;
+      max-width: 100%;
+      height: 250px;
 
-      & h5 {
-        max-width: 500px;
+      & .cube {
+        width: 100%;
+        height: 100%;
+        background-color: $color-2;
+      }
+
+      & h6 {
+        margin-top: 20px;
+        width: 100%;
         font-weight: 300;
-        color: $color-2;
+        color: $color-0;
       }
     }
   }

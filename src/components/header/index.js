@@ -3,7 +3,6 @@ import "./header.scss"
 
 const Navbar = () => {
   const defaultIndicator = (indicator, getActiveLink, aIndex, h, listNav) => {
-    
     //set default Indicator
     var _bool = false
     if (h !== "")
@@ -69,16 +68,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
               <a href="#project">Project</a>
             </li>
             <li>
               <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

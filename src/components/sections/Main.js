@@ -2,12 +2,14 @@ import { useEffect } from "react"
 
 //component
 import ParticlesBG from "../particles/Particles-app"
-import Home from "./home/Home"
-import About from "./about/About"
-import palettes from "../../json/palettes.json"
-import Projects from "./projects/Projects"
-import Experience from "./experience/Experience"
-import Contact from "./contact/Contact"
+import Home from "./home"
+import About from "./about"
+import Projects from "./projects"
+import Experience from "./experience"
+import Contact from "./contact"
+
+//exported from sass variables
+import sass_colors from "../../abstract/_colors.module.scss"
 
 import "./main.scss"
 
@@ -27,7 +29,7 @@ const Main = () => {
       0,
       computedInnerHeight.indexOf("px")
     )
-    computedInnerHeight = parseInt(computedInnerHeight) + 50
+    computedInnerHeight = parseInt(computedInnerHeight) 
 
     console.log('offsettop',aboutOffsetTop)
     // // set the Y particles2 to #contact by default from fixed position
@@ -49,7 +51,7 @@ const Main = () => {
       } else {
         console.log("test")
         cnvsParticle2.style.transform = `translateY(${
-          aboutOffsetTop - computedInnerHeight - value
+          aboutOffsetTop - computedInnerHeight
         }px)`
       }
     })
@@ -63,15 +65,15 @@ const Main = () => {
     <main>
       <ParticlesBG
         id={topClassParticlesID}
-        color={palettes.Themes.Color.clr2}
-        linkedColor={palettes.Themes.Color.clr2}
-        bgColor={palettes.Themes.Color.clr1}
+        color={sass_colors.color2}
+        linkedColor={sass_colors.color2}
+        bgColor={sass_colors.color1}
       />
       <ParticlesBG
         id={bottomClassParticlesID}
-        color={palettes.Themes.Color.clr3}
-        linkedColor={palettes.Themes.Color.clr3}
-        bgColor={palettes.Themes.Color.clr1}
+        color={sass_colors.color2}
+        linkedColor={sass_colors.color2}
+        bgColor={sass_colors.color1}
       />
       <Home />
       <Projects />

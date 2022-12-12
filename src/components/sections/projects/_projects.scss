@@ -1,0 +1,129 @@
+@use "../../../abstract" as *;
+
+.project-bg {
+  position: relative;
+
+  @include set-background-color($color-3);
+
+  & .project-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    & h2 {
+      margin-bottom: 50px;
+
+      & span{
+        color: $color-2;
+      }
+      
+    }
+
+    & .project-list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      height: 100%;
+      row-gap: 40px;
+      column-gap: 30px;
+
+      & .project-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        @include default-box-shadow();
+
+        & .top-container{
+          height: 400px;
+          width: 100%;
+          position: relative;
+
+          & img{
+            top: 0;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
+
+          & .gradient{
+            background: $bg-linear-gradient;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
+
+          & .top-details{
+            gap: 6px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-sizing: border-box;
+
+            & .number{
+              font-weight: 900;
+            }
+
+            & .title{
+              font-size: 2.5rem;
+              font-weight: 900;
+              color: $color-2
+            }
+          }
+        }
+
+        & .bottom-container {
+          padding: 20px;
+          background-color: $color-1;
+          height: 150px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  & .curve1 {
+    top: -100px;
+    left: -10px;
+    right: -10px;
+    z-index: 0;
+    position: absolute;
+    transform: scaleX(-1);
+    transform: rotate(180deg);
+
+    & svg {
+      height: 100px;
+      width: 100%;
+      & path {
+        stroke-width: 3;
+        stroke: $color-3;
+        fill: $color-3;
+      }
+    }
+  }
+
+  & .curve2 {
+    // border: 1px solid red;
+    bottom: -100px;
+    left: -10px;
+    right: -10px;
+    z-index: 1;
+    position: absolute;
+    transform: scaleX(-1);
+
+    & svg {
+      height: 100px;
+      width: 100%;
+      & path {
+        stroke-width: 3;
+        stroke: $color-3;
+        fill: $color-3;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@use "../../../abstract" as *;
+
+.about-bg {
+  position: relative;
+
+  @include set-background-color($color-1);
+
+  & .about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    & .grid {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+
+      & .left-section {
+        & h2 {
+          margin-bottom: 40px;
+
+          & span {
+            color: $color-2;
+          }
+        }
+
+        & p:nth-child(n) {
+          margin-top: 20px;
+        }
+      }
+
+      & .right-section {
+        border: 2px solid $color-2;
+        padding: 30px;
+        background-color: $color-2;
+        color: $color-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & div {
+          display: flex;
+          justify-content: center;
+          & h4 {
+            width: fit-content;
+          }
+        }
+
+        & .tech-icons-grid {
+          margin-top: 20px;
+          margin-bottom: 50px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 30px;
+          row-gap: 40px;
+
+          & .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: $color-2;
+            position: relative;
+
+            & .icon-label {
+              position: absolute;
+              bottom: -10px;
+              font-size: 0.8rem;
+            }
+
+            & svg {
+              width: 70%;
+              height: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .curve {
+    bottom: -100px;
+    left: -10px;
+    right: -10px;
+    z-index: -1;
+    position: absolute;
+    transform: scaleX(-1);
+    transform: rotate(0);
+
+    & svg {
+      height: 100px;
+      width: 100%;
+
+      & path {
+        stroke-width: 3;
+        stroke: $color-2;
+        fill: $color-1;
+      }
+    }
+  }
+}

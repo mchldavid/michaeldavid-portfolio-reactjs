@@ -1,11 +1,14 @@
-import "./_about.scss"
+import "./_experience.scss"
 
-const About = () => {
+const Experience = () => {
   return (
-    <>
-      <div className="about-bg">
-        <section id="about" className="about-section">This is About</section>
-        
+    <>    
+      <div className="experience-bg">
+
+        <section id="experience" className="experience-section">
+          <h2>My <span>Experience</span></h2>
+        </section>
+
         {/* svg line curve */}
         <div className="curve">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -17,4 +20,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Experience

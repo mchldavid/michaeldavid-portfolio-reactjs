@@ -3,10 +3,18 @@
 .experience-bg {
   position: relative;
 
-  @include set-background-color($color-3);
+  @include set-background-color($color-2);
 
   & .experience-section {
-    height: 100vh;
+    padding-top: 150px;
+
+    & h2 {
+
+      & span{
+        color: $color-1;
+      }
+    }
+
   }
 
   & .curve {
@@ -23,9 +31,9 @@
       width: 100%;
       & path {
         stroke-width: 3;
-        stroke: $color-3;
+        stroke: $color-2;
 
-        fill: $color-3;
+        fill: $color-2;
       }
     }
   }
