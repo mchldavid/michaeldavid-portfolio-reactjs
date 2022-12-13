@@ -3,6 +3,9 @@ import "./footer.scss"
 //icons
 import { FaReact } from "react-icons/fa"
 
+//icons
+import { FaReact } from "react-icons/fa"
+
 const Footer = () => {
   return (
     <>
