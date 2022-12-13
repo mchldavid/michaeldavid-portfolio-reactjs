@@ -18,7 +18,7 @@ const ProjectItem = (props) => {
         </div>
         <div className="bottom-container">
           {/* details sections */}
-          {props.description}
+          <p>{props.description}</p>
         </div>
       </div>
     </>

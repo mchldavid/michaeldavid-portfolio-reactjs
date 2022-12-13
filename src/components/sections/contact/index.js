@@ -1,4 +1,4 @@
-import "./_contact.scss"
+import "./contact.scss"
 
 import sass_colors from "../../../abstract/_colors.module.scss"
 

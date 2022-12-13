@@ -1,4 +1,4 @@
-import "./_experience.scss"
+import "./experience.scss"
 
 const Experience = () => {
   return (

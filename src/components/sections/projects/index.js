@@ -1,4 +1,4 @@
-import "./_projects.scss"
+import "./projects.scss"
 
 import ProjectItem from "./ProjectItem"
 
