@@ -1,5 +1,10 @@
 @use "../../../abstract" as *;
 
+#home{
+  position: absolute;
+  top: -2000px;
+}
+
 .home-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,6 +13,10 @@
   & .left-grid {
     display: flex;
     flex-direction: column;
+
+    & div:nth-child(1){
+      color: $color-4;
+    }
 
     & .social-icons{
       margin-top: 10px;
@@ -26,6 +35,7 @@
     }
 
     & p {
+      color: $color-4;
       margin: 10px 0px;
       max-width: 25rem;
     }

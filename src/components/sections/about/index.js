@@ -9,8 +9,8 @@ import {
   FaHtml5,
   FaGit,
 } from "react-icons/fa"
-import { DiJavascript1 } from "react-icons/di"
-import { SiCsharp, SiMysql} from "react-icons/si"
+import { DiJavascript1, DiMysql } from "react-icons/di"
+import { SiCsharp } from "react-icons/si"
 
 const About = () => {
   return (
@@ -41,8 +41,24 @@ const About = () => {
             </div>
 
             <div className="right-section">
-              <div><h4>Skills</h4></div>
+              <div>
+                <h4>Skills</h4>
+              </div>
               <div className="tech-icons-grid">
+                <div className="item">
+                  <svg
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    viewBox="0 0 970.82 970.82"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M313.54,514.23c9,90.31,85.79,161,179.11,161s170.09-70.74,179.12-161c0-6,1.5-12,1.5-18.07,0-99.33-81.28-179.1-180.62-179.1s-179.11,81.27-179.11,179.1v18.07M8,491.65C8,223.75,224.75,7,492.65,7S978.82,223.75,978.82,491.65,760.57,977.82,492.65,977.82,8,759.57,8,491.65"
+                      transform="translate(-8 -7)"
+                    />
+                  </svg>
+                  <div className="icon-label">Outsystems</div>
+                </div>
                 <div className="item">
                   <FaReact />
                   <div className="icon-label">ReactJS</div>
@@ -76,7 +92,7 @@ const About = () => {
                   <div className="icon-label">Csharp</div>
                 </div>
                 <div className="item">
-                  <SiMysql />
+                  <DiMysql />
                   <div className="icon-label">MySQL</div>
                 </div>
               </div>

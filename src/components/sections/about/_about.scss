@@ -17,6 +17,10 @@
       column-gap: 40px;
 
       & .left-section {
+        & p{
+          color: $color-4;
+        }
+
         & h2 {
           margin-bottom: 40px;
 
@@ -59,14 +63,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 20px;
             padding: 10px;
             background-color: $color-2;
             position: relative;
 
             & .icon-label {
               position: absolute;
-              bottom: -10px;
+              bottom: -5px;
               font-size: 0.8rem;
             }
 
@@ -92,6 +95,7 @@
     & svg {
       height: 100px;
       width: 100%;
+      fill: $color-0;
 
       & path {
         stroke-width: 3;
