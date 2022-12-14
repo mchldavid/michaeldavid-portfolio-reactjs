@@ -32,6 +32,10 @@
     & div h1 {
       color: $color-2;
       margin: 10px 0px;
+
+      & span{
+        color: $color-0 ;
+      }
     }
 
     & p {

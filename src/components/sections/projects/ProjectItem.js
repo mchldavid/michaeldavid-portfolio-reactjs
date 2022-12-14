@@ -10,10 +10,11 @@ const ProjectItem = (props) => {
           <div className="top-details">
             <div className="number">{props.no}</div>
             <div className="title">{props.title}</div>
-            <div className="technology">
+            <ul className="technology">
               {/* list of technology */}
-              react js, sass
-            </div>
+                <li>ReactJS</li>
+                <li>Sass</li>
+            </ul>
           </div>
         </div>
         <div className="bottom-container">

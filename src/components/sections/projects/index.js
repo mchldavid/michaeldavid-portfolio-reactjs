@@ -28,7 +28,7 @@ const Projects = () => {
               image={
                 window.location.origin + "/assets/pictures/sample-photo-1.jpg"
               }
-              no="#01"
+              no="#02"
               title="my portfolio"
               description="My personal website"
             />
@@ -36,7 +36,7 @@ const Projects = () => {
               image={
                 window.location.origin + "/assets/pictures/sample-photo-1.jpg"
               }
-              no="#01"
+              no="#03"
               title="my portfolio"
               description="My personal website"
             />

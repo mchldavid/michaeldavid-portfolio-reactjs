@@ -42,7 +42,7 @@ const About = () => {
 
             <div className="right-section">
               <div>
-                <h4>Skills</h4>
+                <h4>Skills & Technologies</h4>
               </div>
               <div className="tech-icons-grid">
                 <div className="item">

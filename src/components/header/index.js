@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import "./header.scss"
+import sass_color from "../../abstract/_colors.module.scss"
 
 const Navbar = () => {
   const defaultIndicator = (indicator, getActiveLink, aIndex, h, listNav) => {
@@ -23,12 +24,14 @@ const Navbar = () => {
       getActiveLink.getBoundingClientRect().x - aIndex.getBoundingClientRect().x
     }px)`
     indicator.style.width = `${getActiveLink.offsetWidth + 10}px`
+
+    console.log('width', getActiveLink.offsetWidth , getActiveLink.getBoundingClientRect().width)
   }
 
   useEffect(() => {
-    const h = window.location.hash
 
-    console.log("useeffect")
+    const h = window.location.hash
+    
     const listNav = document.querySelectorAll("nav ul li")
     const indicator = document.querySelector(".indicator")
 
@@ -38,8 +41,9 @@ const Navbar = () => {
 
     //add funtion to move the indicator when click
     listNav.forEach((a) => {
+      //onclick function from {a} element
       a.childNodes[0].addEventListener("click", (e) => {
-        //onclick function from {a} element
+        
         listNav.forEach((el) => {
           el.children[0].classList.remove("active")
         })
@@ -50,10 +54,42 @@ const Navbar = () => {
           rect.x - aIndex.getBoundingClientRect().x
         }px)`
         indicator.style.width = `${e.target.offsetWidth + 10}px`
-        console.log(e.target.offsetWidth)
+        console.log(e.target.getBoundingClientRect().width)
       })
     })
+
+    //set the default position of the indicator
     defaultIndicator(indicator, getActiveLink, aIndex, h, listNav)
+  }, [])
+
+  useEffect(() => {
+  var lastScrolltop = 0;
+  var header = document.querySelector("header")
+  var headerHeight = header.offsetHeight
+  console.log('header height', headerHeight)
+
+  //scroll down show scroll up effect
+  window.addEventListener("scroll", () => {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop
+
+    console.log('scroll',window.scrollY, document.documentElement.scrollTop, lastScrolltop)
+
+    if(scrollTop > headerHeight){
+      header.classList.add("with-backdrop-filter")
+    }else{
+      header.classList.remove("with-backdrop-filter")
+    }
+
+    if(scrollTop > lastScrolltop){
+      header.style.position = "sticky"
+      header.style.top = `-${headerHeight}px`
+    } else{
+      header.style.top=0
+      header.style.position = "sticky"
+    }
+    lastScrolltop = scrollTop
+  })
+
   }, [])
 
   return (

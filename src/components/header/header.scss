@@ -5,22 +5,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
+
+  transition: background-color $anim-time ease, backdrop-filter $anim-time ease, top $anim-time ease;
 
   width: 100vw;
   height: auto;
   z-index: 1000;
 
   & nav {
-    padding: $padding;
+    padding: 1.5rem $padding;
     box-sizing: border-box;
     height: 100%;
     max-width: $max-w-val;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -35,13 +35,13 @@
 
       & .indicator {
         background-color: $color-2;
-        width: 55px;
+        width: 0px;
         height: 3px;
         position: absolute;
         bottom: 0;
         left: 0;
         border-radius: 20px;
-        transition: all $time ease-in-out;
+        transition: all $anim-time ease-in-out;
       }
 
       & li {
@@ -53,7 +53,7 @@
           font-size: 1rem;
           color: $color-0;
           text-decoration: none;
-          transition: all $time ease;
+          transition: all $anim-time ease;
 
           &:hover {
             color: $color-2;
@@ -62,4 +62,9 @@
       }
     }
   }
+}
+
+.with-backdrop-filter{
+  background-color: rgba($color-1, 0.5);
+  backdrop-filter: blur(5px);
 }

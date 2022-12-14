@@ -3,7 +3,7 @@ import sass_colors from "../../../abstract/_colors.module.scss"
 
 //icons
 import { IconContext } from "react-icons"
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs"
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <div id="home"></div>
       <section className="home-section">
         <div className="left-grid">
-          <div>Hello, I am</div>
+          <div>Nice to meet you, I am</div>
           <div>
             <h1>
               Michael <span>David</span>
@@ -62,7 +62,8 @@ const Home = () => {
             What <span>I do?</span>
           </h1>
           <div>
-            <div className="cube"></div>
+            <div className="cube radius">
+            </div>
             <h6>
               I’ve been coding professionally for 3 years as a systems
               developmennt specialist that focuses in customizable solutions
