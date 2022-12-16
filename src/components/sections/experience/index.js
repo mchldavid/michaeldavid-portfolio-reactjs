@@ -2,11 +2,53 @@ import "./experience.scss"
 
 const Experience = () => {
   return (
-    <>    
+    <>
       <div className="experience-bg">
-
         <section id="experience" className="experience-section">
-          <h2>My <span>Experience</span></h2>
+          <h2>
+            My <span>Experience</span>
+          </h2>
+
+          <ul class="list">
+            <li class="list-item">
+              <div class="format-odd">
+                <div class="left-content">
+                  <div class="calendar-year">2022</div>
+                </div>
+                <div class="right-content">
+                  <div class="logo">
+                  <img src={window.location.origin + "/assets/logo/tesi-logo.png"} alt=""></img>
+                  </div>
+                  <div class="descriptions radius">
+                    <div class="years">Jun 2019 - Mar 2022</div>
+                    <h6 class="title">Systems Development Specialists</h6>
+                    <div class="company-name">
+                      Transnational E-Business Solutions Inc.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="format-even">
+                <div class="left-content">
+                  <div class="calendar-year">2019</div>
+                </div>
+                <div class="right-content">
+                  <div class="logo">
+                    <img src={window.location.origin + "/assets/logo/shoppetown-logo.jpg"} alt=""></img>
+                  </div>
+                  <div class="descriptions radius">
+                    <div class="years">Dec 2018 - Mar 2019</div>
+                    <h6 class="title">Internships</h6>
+                    <div class="company-name">
+                      Shoppetown Property Management and Leasing
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div class="line"></div>
+          </ul>
         </section>
 
         {/* svg line curve */}

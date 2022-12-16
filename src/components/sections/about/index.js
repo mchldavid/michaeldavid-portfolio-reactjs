@@ -8,6 +8,7 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaGit,
+  FaFigma
 } from "react-icons/fa"
 import { DiJavascript1, DiMysql } from "react-icons/di"
 import { SiCsharp } from "react-icons/si"
@@ -84,16 +85,20 @@ const About = () => {
                   <div className="icon-label">HTML5</div>
                 </div>
                 <div className="item">
-                  <FaGit />
-                  <div className="icon-label">Git</div>
-                </div>
-                <div className="item">
                   <SiCsharp />
                   <div className="icon-label">Csharp</div>
                 </div>
                 <div className="item">
                   <DiMysql />
                   <div className="icon-label">MySQL</div>
+                </div>
+                <div className="item">
+                  <FaGit />
+                  <div className="icon-label">Git</div>
+                </div>
+                <div className="item">
+                  <FaFigma />
+                  <div className="icon-label">Figma</div>
                 </div>
               </div>
             </div>

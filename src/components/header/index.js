@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import "./header.scss"
-import sass_color from "../../abstract/_colors.module.scss"
 
 const Navbar = () => {
   const defaultIndicator = (indicator, getActiveLink, aIndex, h, listNav) => {
