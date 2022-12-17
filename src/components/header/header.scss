@@ -1,62 +1,82 @@
 @use "../../abstract/" as *;
 
+#home {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  // top: -80px;
+  z-index: 100;
+}
+
 .header {
   font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: background-color $anim-time ease, backdrop-filter $anim-time ease, top $anim-time ease;
+  transition: background-color $anim-time ease, backdrop-filter $anim-time ease,
+    top $anim-time ease;
 
   width: 100vw;
   height: auto;
   z-index: 1000;
 
-  & nav {
-    padding: 1.5rem $padding;
-    box-sizing: border-box;
-    height: 100%;
+  & .header-content {
     max-width: $max-w-val;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1.5rem $padding;
+    box-sizing: border-box;
 
-    & .navigation {
+    & .logo {
+      width: 50px;
+      background-color: red;
+    }
+
+    & nav {
+      box-sizing: border-box;
+      height: 100%;
+
       display: flex;
+      align-items: center;
       justify-content: flex-end;
-      flex-direction: row;
-      position: relative;
-      padding: 5px;
-      gap: 2rem;
 
-      & .indicator {
-        background-color: $color-2;
-        width: 0px;
-        height: 3px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        border-radius: 20px;
-        transition: all $anim-time ease-in-out;
-      }
+      & .navigation {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        position: relative;
+        padding: 5px;
+        gap: 2rem;
 
-      & li {
-        & .active {
-          color: $color-2;
+        & .indicator {
+          background-color: $color-2;
+          width: 0px;
+          height: 3px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-radius: 20px;
+          transition: all $anim-time ease-in-out;
         }
 
-        & a {
-          font-size: 1rem;
-          color: $color-0;
-          text-decoration: none;
-          transition: all $anim-time ease;
-
-          &:hover {
+        & li {
+          & .active {
             color: $color-2;
+          }
+
+          & a {
+            font-size: 1rem;
+            color: $color-0;
+            text-decoration: none;
+            transition: all $anim-time ease;
+
+            &:hover {
+              color: $color-2;
+            }
           }
         }
       }
@@ -64,7 +84,7 @@
   }
 }
 
-.with-backdrop-filter{
+.with-backdrop-filter {
   background-color: rgba($color-1, 0.5);
   backdrop-filter: blur(5px);
 }

@@ -8,7 +8,7 @@ import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 const Home = () => {
   return (
     <>
-      <div id="home"></div>
+      
       <section className="home-section">
         <div className="left-grid">
           <div>Nice to meet you, I am</div>

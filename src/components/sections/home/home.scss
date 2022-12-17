@@ -1,10 +1,5 @@
 @use "../../../abstract" as *;
 
-#home{
-  position: absolute;
-  top: -2000px;
-}
-
 .home-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
