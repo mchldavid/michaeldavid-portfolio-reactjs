@@ -1,6 +1,9 @@
 import { useEffect } from "react"
 import "./header.scss"
 
+import { GiHamburgerMenu } from "react-icons/gi"
+import { IoCloseSharp } from "react-icons/io5"
+
 const Navbar = () => {
   const indicatorMovement = (indicator, aLink) => {
     const navRectX = document.querySelector("nav").getBoundingClientRect().x
@@ -12,6 +15,26 @@ const Navbar = () => {
     indicator.style.width = `${aLink.offsetWidth + 10}px`
   }
 
+  //for menu toggle
+  const toggleMenu = (toCloseByScroll) => {
+    const btn = document.querySelector(".toggle-menu")
+    const ul = document.querySelector(".navigation")
+    const header = document.querySelector("header")
+
+    if (
+      btn.getAttribute("aria-expanded") === "false" &&
+      toCloseByScroll === false
+    ) {
+      btn.setAttribute("aria-expanded", true)
+      ul.setAttribute("data-visible", true)
+      header.classList.add("default-bg-color")
+    } else {
+      btn.setAttribute("aria-expanded", false)
+      ul.setAttribute("data-visible", false)
+      header.classList.remove("default-bg-color")
+    }
+  }
+
   useEffect(() => {
     const listNav = document.querySelectorAll("nav ul li")
     const indicator = document.querySelector(".indicator")
@@ -20,6 +43,9 @@ const Navbar = () => {
     listNav.forEach((a) => {
       //onclick function from {a} element
       a.childNodes[0].addEventListener("click", (e) => {
+        //to force close the menu
+        toggleMenu(true)
+
         listNav.forEach((el) => {
           el.children[0].classList.remove("active")
         })
@@ -47,26 +73,24 @@ const Navbar = () => {
     window.addEventListener("scroll", () => {
       var scrollTop = window.scrollY || document.documentElement.scrollTop
 
-      // if (scrollTop > headerHeight) {
-      //   header.classList.add("with-backdrop-filter")
-      //   console.log("log1");
-      // } else {
-      //   header.classList.remove("with-backdrop-filter")
-      //   console.log("log2");
-      // }
+      //to force close the menu
+      toggleMenu(true)
 
       if (scrollTop > lastScrolltop) {
-        header.style.position = "sticky"
         header.style.top = `-${headerHeight}px`
       } else {
         header.style.top = 0
-        header.style.position = "sticky"
         if (scrollTop > headerHeight) {
-          header.classList.add("with-backdrop-filter")
+          if (!header.classList.contains("with-backdrop-filter")) {
+            header.classList.add("with-backdrop-filter")
+          }
         } else {
-          header.classList.remove("with-backdrop-filter")
+          if (header.classList.contains("with-backdrop-filter")) {
+            header.classList.remove("with-backdrop-filter")
+          }
         }
       }
+
       lastScrolltop = scrollTop
 
       //change position of an indicator when scrolling
@@ -93,7 +117,18 @@ const Navbar = () => {
         <div className="header-content">
           <div className="logo">Logo</div>
           <nav>
-            <ul id="navigation" data-visible="true" className="navigation">
+            <button
+              className="toggle-menu"
+              aria-controls="navigation"
+              aria-expanded="false"
+              onClick={() => {
+                toggleMenu(false)
+              }}
+            >
+              <GiHamburgerMenu />
+              <IoCloseSharp />
+            </button>
+            <ul id="navigation" data-visible="false" className="navigation">
               <div className="indicator"></div>
               <li>
                 <a href="#home" className="active">

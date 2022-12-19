@@ -147,6 +147,8 @@
 @media (max-width: $media-w-l) {
   .project-bg {
     & .project-section {
+      padding-top: 2rem;
+
       & .project-list-grid {
         grid-template-columns: repeat(2, 1fr);
       }

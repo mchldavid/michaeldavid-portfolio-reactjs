@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
 
   transition: background-color $anim-time ease, backdrop-filter $anim-time ease,
     top $anim-time ease;
@@ -44,6 +45,37 @@
       align-items: center;
       justify-content: flex-end;
 
+      & .toggle-menu {
+        background-color: transparent;
+        border-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+        & svg {
+          width: 20px;
+          height: 20px;
+          color: $color-2;
+        }
+      }
+
+      & .toggle-menu[aria-expanded="true"]{
+        & svg:nth-child(1){
+          display: none;
+        }
+      }
+
+      & .toggle-menu[aria-expanded="false"]{
+        & svg:nth-child(2){
+          display: none;
+        }
+      }
+
+      & .toggle-menu:focus-visible {
+        outline: unset;
+      }
+
       & .navigation {
         display: flex;
         justify-content: flex-end;
@@ -51,6 +83,7 @@
         position: relative;
         padding: 5px;
         gap: 2rem;
+        transition: $anim-all;
 
         & .indicator {
           background-color: $color-2;
@@ -89,9 +122,48 @@
   backdrop-filter: blur(5px);
 }
 
+.default-bg-color {
+  background-color: $color-1;
+}
 
-// @media only screen and (min-width : 48rem) {
-//     . {
-//         /* styles here */
-//     }
-// }
+@media (max-width: $media-w-m) {
+  .header {
+    & .header-content {
+      & nav {
+        & .toggle-menu {
+          display: block;
+        }
+
+        & .indicator {
+          display: none;
+        }
+
+        & .navigation[data-visible="false"] {
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          bottom: 100px;
+          background-color: $color-1;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+          opacity: 0;
+        }
+
+        & .navigation[data-visible="true"] {
+          padding-top: 10vh;
+          position: absolute;
+          top: 72px;
+          bottom: -100vh;
+          left: 0;
+          right: 0;
+          background-color: $color-1;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
