@@ -9,16 +9,16 @@
     display: flex;
     flex-direction: column;
 
-    & div:nth-child(1){
+    & div:nth-child(1) {
       color: $color-4;
     }
 
-    & .social-icons{
+    & .social-icons {
       margin-top: 10px;
       display: flex;
       gap: 20px;
 
-      & svg{
+      & svg {
         width: 30px;
         height: 30px;
       }
@@ -28,8 +28,8 @@
       color: $color-2;
       margin: 10px 0px;
 
-      & span{
-        color: $color-0 ;
+      & span {
+        color: $color-0;
       }
     }
 
@@ -115,15 +115,14 @@
     align-items: center;
     gap: 40px;
 
-
     & h1 {
       width: 280px;
 
-      & span{
+      & span {
         color: $color-2;
       }
     }
-    
+
     & div {
       display: flex;
       justify-content: center;
@@ -144,6 +143,22 @@
         font-weight: 300;
         color: $color-0;
       }
+    }
+  }
+}
+
+
+@media (max-width: $media-w-l){
+  .home-section{
+    grid-template-columns: 1fr;
+    min-height: 650px;
+
+    & .left-grid {
+      padding-top: 10%;
+    }
+    
+    & .right-grid{
+      display: none;
     }
   }
 }

@@ -12,10 +12,9 @@
     & h2 {
       margin-bottom: 50px;
 
-      & span{
+      & span {
         color: $color-2;
       }
-      
     }
 
     & .project-list-grid {
@@ -34,12 +33,12 @@
 
         // @include default-box-shadow();
 
-        & .top-container{
+        & .top-container {
           height: 300px;
           width: 100%;
           position: relative;
 
-          & img{
+          & img {
             top: 0;
             object-fit: cover;
             height: 100%;
@@ -47,14 +46,14 @@
             position: absolute;
           }
 
-          & .gradient{
+          & .gradient {
             @include background-gradient-linear($color-1);
             height: 100%;
             width: 100%;
             position: absolute;
           }
 
-          & .top-details{
+          & .top-details {
             gap: 6px;
             position: absolute;
             height: 100%;
@@ -65,26 +64,26 @@
             justify-content: flex-end;
             box-sizing: border-box;
 
-            & .number{
+            & .number {
               font-weight: 900;
             }
 
-            & .title{
+            & .title {
               font-size: 2.5rem;
               font-weight: 900;
               color: $color-2;
             }
 
-            & ul{
+            & ul {
               display: flex;
               flex-direction: row;
 
-              & li{
+              & li {
                 margin-right: 5px;
                 border: 1px solid $color-0;
                 padding: 5px 10px;
                 border-radius: 25px;
-                font-size: .7rem;
+                font-size: 0.7rem;
               }
             }
           }
@@ -96,7 +95,7 @@
           height: 100px;
           font-size: 1rem;
 
-          & p{
+          & p {
             color: $color-4;
           }
         }
@@ -140,6 +139,27 @@
         stroke-width: 3;
         stroke: $color-3;
         fill: $color-3;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-w-l) {
+  .project-bg {
+    & .project-section {
+      & .project-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+
+@media (max-width: $media-w-m) {
+  .project-bg {
+    & .project-section {
+      & .project-list-grid {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
   }

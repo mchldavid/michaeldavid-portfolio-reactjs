@@ -18,7 +18,6 @@ const Navbar = () => {
     const getActiveLink = document.querySelector("nav ul li .active")
 
     listNav.forEach((a) => {
-
       //onclick function from {a} element
       a.childNodes[0].addEventListener("click", (e) => {
         listNav.forEach((el) => {
@@ -48,11 +47,13 @@ const Navbar = () => {
     window.addEventListener("scroll", () => {
       var scrollTop = window.scrollY || document.documentElement.scrollTop
 
-      if (scrollTop > headerHeight) {
-        header.classList.add("with-backdrop-filter")
-      } else {
-        header.classList.remove("with-backdrop-filter")
-      }
+      // if (scrollTop > headerHeight) {
+      //   header.classList.add("with-backdrop-filter")
+      //   console.log("log1");
+      // } else {
+      //   header.classList.remove("with-backdrop-filter")
+      //   console.log("log2");
+      // }
 
       if (scrollTop > lastScrolltop) {
         header.style.position = "sticky"
@@ -60,6 +61,11 @@ const Navbar = () => {
       } else {
         header.style.top = 0
         header.style.position = "sticky"
+        if (scrollTop > headerHeight) {
+          header.classList.add("with-backdrop-filter")
+        } else {
+          header.classList.remove("with-backdrop-filter")
+        }
       }
       lastScrolltop = scrollTop
 
