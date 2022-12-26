@@ -28,7 +28,7 @@ const Experience = () => {
                     </div>
                     <div className="descriptions">
                       <div className="years">Jun 2019 - Mar 2022</div>
-                      <h6 className="title">Systems Development Specialists</h6>
+                      <div className="title">Systems Development Specialists</div>
                       <div className="company-name">
                         Transnational E-Business Solutions Inc.
                       </div>
@@ -55,7 +55,7 @@ const Experience = () => {
                     </div>
                     <div className="descriptions radius">
                       <div className="years">Dec 2018 - Mar 2019</div>
-                      <h6 className="title">Internships</h6>
+                      <div className="title">Internships</div>
                       <div className="company-name">
                         Shoppetown Property Management and Leasing
                       </div>

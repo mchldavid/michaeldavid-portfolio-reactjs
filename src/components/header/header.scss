@@ -33,8 +33,14 @@
     box-sizing: border-box;
 
     & .logo {
-      width: 50px;
-      background-color: red;
+      width: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & svg{
+        fill: $color-2;
+      }
     }
 
     & nav {

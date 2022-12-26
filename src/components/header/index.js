@@ -4,6 +4,8 @@ import "./header.scss"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { IoCloseSharp } from "react-icons/io5"
 
+import MyLogo from "../svg/MyLogo"
+
 const Navbar = () => {
   const indicatorMovement = (indicator, aLink) => {
     const navRectX = document.querySelector("nav").getBoundingClientRect().x
@@ -98,7 +100,7 @@ const Navbar = () => {
         let secTop = sec.getBoundingClientRect().top
         let secAttrId = sec.getAttribute("id")
 
-        if (secTop >= 0 && secTop <= headerHeight) {
+        if (secTop >= 0 && secTop <= headerHeight + 50) {
           if (secAttrId !== null) {
             document.querySelector("a.active").classList.remove("active")
             let activeLink = document.querySelector(`a[href='#${secAttrId}']`)
@@ -115,7 +117,9 @@ const Navbar = () => {
       <section id="home"></section>
       <header className="header">
         <div className="header-content">
-          <div className="logo">Logo</div>
+          <div className="logo">
+            <MyLogo />
+          </div>
           <nav>
             <button
               className="toggle-menu"

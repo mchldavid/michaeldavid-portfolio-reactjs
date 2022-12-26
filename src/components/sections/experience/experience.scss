@@ -6,7 +6,7 @@
   @include set-background-color($color-2);
 
   & .experience-section {
-    padding-top: 150px;
+    // padding-top: 100px;
 
     & h2 {
       & span {
@@ -51,7 +51,7 @@
           justify-content: center;
           align-items: center;
 
-          & img{
+          & img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -62,16 +62,16 @@
           background-color: $color-0;
           filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
           display: grid;
-          grid-template-areas: 'RA RB';
+          grid-template-areas: "RA RB";
           padding: 10px 20px;
           align-items: center;
-
         }
 
-        & .line-horizontal{
+        & .line-horizontal {
           background-color: $color-1;
           width: 50px;
           height: 5px;
+          transition: $anim-all;
         }
 
         & .descriptions {
@@ -88,8 +88,9 @@
             margin-bottom: 5px;
           }
 
-          & .years{
-            font-weight: 500;
+          & .years {
+            font-weight: 300;
+            font-size: small;
           }
 
           & .title {
@@ -186,7 +187,7 @@
               align-items: flex-end;
               grid-area: RA;
 
-              & div:nth-child(n){
+              & div:nth-child(n) {
                 text-align: end;
               }
             }
@@ -227,89 +228,100 @@
   }
 }
 
-
-@media (max-width: $media-w-l){
-  .experience-bg{
-
-  & .experience-section{
-    & .list{
-      & .list-item {
-        & .logo{
-          display: none;
+@media (max-width: $media-w-l) {
+  .experience-bg {
+    & .experience-section {
+      & .list {
+        & .list-item {
+          & .logo {
+            display: none;
+          }
         }
       }
     }
-   }
   }
 }
 
-@media (max-width: $media-w-m){
-  .experience-bg{
+@media (max-width: $media-w-m) {
+  .experience-bg {
+    & .experience-section {
+      & .line-vertical {
+        left: 0;
+      }
 
-  & .experience-section{
-    & .line-vertical{
-      left: 0;
-    }
+      & .list {
+        margin-top: 10%;
+        margin-bottom: 10%;
 
-    & .list{
-      margin-top: 10%;
-      margin-bottom: 10%;
+        & .list-item {
+          padding-top: 10px;
 
-      & .list-item {
-        padding-top: 10px;
-
-        & .descriptions{
-          padding: 5px;
-        }
-
-        & .format-odd{
-          grid-template-columns: 1fr;
-          display: flex;
-          margin-bottom: 0px;
-
-          & .left-content{
-            display: none;
+          & .descriptions {
+            padding: 5px;
           }
 
-          & .right-content{
-            width: 100%;
-            & .panel {
+          & .format-odd {
+            grid-template-columns: 1fr;
+            display: flex;
+            margin-bottom: 0px;
+
+            & .left-content {
+              display: none;
+            }
+
+            & .right-content {
               width: 100%;
-              display: flex;
+              & .panel {
+                width: 100%;
+                display: flex;
+              }
             }
           }
-        }
-        
-        & .format-even{
-          display: flex;
 
-          & .left-content{
-            display: none;
-          }
+          & .format-even {
+            display: flex;
 
-          & .right-content{
-            width: 100%;
-            & .panel {
-              order: 1;
+            & .left-content {
+              display: none;
+            }
+
+            & .right-content {
               width: 100%;
-              display: flex;
-            }
+              & .panel {
+                order: 1;
+                width: 100%;
+                display: flex;
+              }
 
-            & .line-horizontal {
-              order: 0;
-            }
+              & .line-horizontal {
+                order: 0;
+              }
 
-            & .descriptions{
-              align-items: flex-start;
+              & .descriptions {
+                align-items: flex-start;
 
-              & div:nth-child(n){
-                text-align: start;
+                & div:nth-child(n) {
+                  text-align: start;
+                }
               }
             }
           }
         }
       }
     }
-   }
+  }
+}
+
+@media (max-width: $media-w-s) {
+  .experience-bg {
+    & .experience-section {
+      & .list {
+        & .list-item {
+          & .line-horizontal {
+            width: 10px;
+          }
+        }
+      }
+    }
   }
 }

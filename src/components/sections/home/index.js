@@ -1,17 +1,14 @@
 import "./home.scss"
-import sass_colors from "../../../abstract/_colors.module.scss"
-
-//icons
-import { IconContext } from "react-icons"
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import MyLinks from "../../svg/MyLinks"
 
 const Home = () => {
   return (
     <>
-      
       <section className="home-section">
         <div className="left-grid">
-          <div>Nice to meet you, I am</div>
+          <div>
+            Nice to meet you <span>👋</span>, I am
+          </div>
           <div>
             <h1>
               Michael <span>David</span>
@@ -25,13 +22,9 @@ const Home = () => {
 
           <h4>Front End Web Developer</h4>
 
-          <IconContext.Provider value={{ color: sass_colors.color2 }}>
-            <div className="social-icons">
-              <BsGithub />
-              <BsInstagram />
-              <BsLinkedin />
-            </div>
-          </IconContext.Provider>
+          <div className="social-icons">
+            <MyLinks />
+          </div>
         </div>
 
         <div className="right-grid">
@@ -62,8 +55,7 @@ const Home = () => {
             What <span>I do?</span>
           </h1>
           <div>
-            <div className="cube radius">
-            </div>
+            <div className="cube radius"></div>
             <h6>
               I’ve been coding professionally for 3 years as a systems
               developmennt specialist that focuses in customizable solutions

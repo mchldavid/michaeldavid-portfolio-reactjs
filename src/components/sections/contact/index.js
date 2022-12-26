@@ -1,12 +1,28 @@
 import "./contact.scss"
-
-import sass_colors from "../../../abstract/_colors.module.scss"
-
-//icons
-import { IconContext } from "react-icons"
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs"
+import MyLinks from "../../svg/MyLinks"
+import { AiOutlineCopy } from "react-icons/ai"
+import { useEffect } from "react"
 
 const Contact = () => {
+  useEffect(() => {
+    const span = document.querySelector(".email-to")
+
+    span.onclick = function (event) {
+      navigator.clipboard.writeText("david.michael15.md@gmail.com");
+    }
+
+    // span.addEventListener("copy", function (event) {
+    //   event.preventDefault()
+    //   if (event.clipboardData) {
+    //     event.clipboardData.setData(
+    //       "text/plain",
+    //       "david.michael15.md@gmail.com"
+    //     )
+    //     console.log("copied text", event.clipboardData.getData("text"))
+    //   }
+    // })
+  }, [])
+
   return (
     <>
       <div className="contact-bg">
@@ -15,16 +31,17 @@ const Contact = () => {
             Let's <span>Work Together</span>
           </h2>
           <h4>
-            david.michael15.md@gmail.com
+            <a href="mailto:david.michael15.md@gmail.com">
+              david.michael15.md@gmail.com
+            </a>
+            <span className="email-to">
+              <AiOutlineCopy />
+            </span>
           </h4>
 
-          <IconContext.Provider value={{ color: sass_colors.color2 }}>
-            <div className="social-icons">
-              <BsGithub />
-              <BsInstagram />
-              <BsLinkedin />
-            </div>
-          </IconContext.Provider>
+          <div className="social-icons">
+            <MyLinks />
+          </div>
         </section>
       </div>
     </>
