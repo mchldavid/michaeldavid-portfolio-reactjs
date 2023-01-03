@@ -1,4 +1,5 @@
 import "./footer.scss"
+import { scrollSmoothTransition } from "../../functions/scrollSmoothTransition"
 
 //icons
 import { FaReact } from "react-icons/fa"
@@ -12,14 +13,19 @@ const Footer = () => {
             <div>
               <span>Built with</span>
               <span>
-                <FaReact style={{width: "20px", height: "20px"}} />{" "}
+                <FaReact style={{ width: "20px", height: "20px" }} />{" "}
               </span>
               <span> ReactJS</span>
             </div>
             <div>
-              <span>Copyright © 2022 </span>
-              <span>
-                <a href="#home">Michael David</a>
+              <span>Copyright © 2023 </span>
+              <span
+                className="author"
+                onClick={(e) => {
+                  scrollSmoothTransition(e, "#home")
+                }}
+              >
+                Michael David
               </span>
             </div>
           </div>

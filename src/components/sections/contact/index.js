@@ -1,14 +1,15 @@
 import "./contact.scss"
 import MyLinks from "../../svg/MyLinks"
 import { AiOutlineCopy } from "react-icons/ai"
+import { FiSend } from "react-icons/fi"
 import { useEffect } from "react"
 
 const Contact = () => {
   useEffect(() => {
-    const span = document.querySelector(".email-to")
+    const span = document.querySelector(".email-copy")
 
     span.onclick = function (event) {
-      navigator.clipboard.writeText("david.michael15.md@gmail.com");
+      navigator.clipboard.writeText("david.michael15.md@gmail.com")
     }
 
     // span.addEventListener("copy", function (event) {
@@ -30,18 +31,20 @@ const Contact = () => {
           <h2>
             Let's <span>Work Together</span>
           </h2>
-          <h4>
+          <h4 className="my-email">
             <a href="mailto:david.michael15.md@gmail.com">
-              david.michael15.md@gmail.com
+              <span>david.michael15.md@gmail.com</span>
+              <div className="send-email">
+                Email
+                <FiSend />
+              </div>
             </a>
-            <span className="email-to">
+            <span className="email-copy">
               <AiOutlineCopy />
             </span>
           </h4>
 
-          <div className="social-icons">
-            <MyLinks />
-          </div>
+          <MyLinks />
         </section>
       </div>
     </>

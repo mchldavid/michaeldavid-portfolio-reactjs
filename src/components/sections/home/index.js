@@ -22,9 +22,7 @@ const Home = () => {
 
           <h4>Front End Web Developer</h4>
 
-          <div className="social-icons">
-            <MyLinks />
-          </div>
+          <MyLinks />
         </div>
 
         <div className="right-grid">

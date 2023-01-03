@@ -9,7 +9,7 @@
 }
 
 
-@mixin background-gradient-linear($color-value){
-  background: linear-gradient(360deg, rgba($color-value, 0.8) 1.54%, rgba(0, 0, 0, 0) 100%);
+@mixin background-gradient-linear($color-value, $value: 100%){
+  background: linear-gradient(360deg, rgba($color-value, 0.8) $value, rgba(0, 0, 0, 0) 100%);
   
 }

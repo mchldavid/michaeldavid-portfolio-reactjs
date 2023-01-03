@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import "./header.scss"
+import { scrollSmoothTransition } from "../../functions/scrollSmoothTransition"
 
+//icons
 import { GiHamburgerMenu } from "react-icons/gi"
 import { IoCloseSharp } from "react-icons/io5"
 
@@ -37,6 +39,8 @@ const Navbar = () => {
     }
   }
 
+  
+
   useEffect(() => {
     const listNav = document.querySelectorAll("nav ul li")
     const indicator = document.querySelector(".indicator")
@@ -47,17 +51,13 @@ const Navbar = () => {
       a.childNodes[0].addEventListener("click", (e) => {
         //to force close the menu
         toggleMenu(true)
-
         listNav.forEach((el) => {
           el.children[0].classList.remove("active")
         })
         e.target.classList.add("active")
 
         //smooth transition for anchor link behaviour
-        e.preventDefault()
-        document.querySelector(e.target.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        })
+        scrollSmoothTransition(e, e.target.getAttribute("href"))
       })
     })
 
@@ -117,8 +117,8 @@ const Navbar = () => {
       <section id="home"></section>
       <header className="header">
         <div className="header-content">
-          <div className="logo">
-            <MyLogo />
+          <div className="logo" onClick={(e) => {scrollSmoothTransition(e, "#home")}}>
+              <MyLogo />
           </div>
           <nav>
             <button
