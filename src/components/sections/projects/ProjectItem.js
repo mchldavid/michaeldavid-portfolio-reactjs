@@ -12,14 +12,19 @@ const ProjectItem = (props) => {
             <div className="title">{props.title}</div>
             <ul className="technology">
               {/* list of technology */}
-                <li>ReactJS</li>
-                <li>Sass</li>
+              {props.technology&&
+                props.technology.map((tech, idx) => 
+                  <li key={idx}>{tech}</li>
+                )
+              }
+                
             </ul>
           </div>
         </div>
         <div className="bottom-container">
           {/* details sections */}
           <p>{props.description}</p>
+          <div className="links">{props.links}</div>
         </div>
       </div>
     </>

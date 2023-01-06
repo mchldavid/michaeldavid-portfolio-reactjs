@@ -1,6 +1,7 @@
 import "./projects.scss"
 
 import ProjectItem from "./ProjectItem"
+import { BsGithub } from "react-icons/bs"
 
 const Projects = () => {
   return (
@@ -14,31 +15,30 @@ const Projects = () => {
         </div>
 
         <section id="project" className="project-section">
-          <h2>My <span>Projects</span></h2>
+          <h2>
+            My <span>Projects</span>
+          </h2>
           <div className="project-list-grid">
             <ProjectItem
               image={
                 window.location.origin + "/assets/pictures/sample-photo-1.jpg"
               }
               no="#01"
-              title="my portfolio"
+              title="My Portfolio"
               description="My personal website"
+              technology={["ReactJS", "Sass", "Figma"]}
+              test={<BsGithub />}
+              links={<a href="https://github.com/mchldavid/michaeldavid-portfolio-reactjs"><BsGithub /></a>}
             />
             <ProjectItem
               image={
                 window.location.origin + "/assets/pictures/sample-photo-1.jpg"
               }
               no="#02"
-              title="my portfolio"
-              description="My personal website"
-            />
-            <ProjectItem
-              image={
-                window.location.origin + "/assets/pictures/sample-photo-1.jpg"
-              }
-              no="#03"
-              title="my portfolio"
-              description="My personal website"
+              title="PUPSMB Class Scheduling"
+              description="Undergrad thesis: A computer-aided system that will produce a schedule while monitoring all the possible conflicts during the process of class scheduling."
+              technology={["Csharp"]}
+              links={<a href="https://github.com/mchldavid/pupsmb-class-scheduling"><BsGithub /></a>}
             />
           </div>
         </section>

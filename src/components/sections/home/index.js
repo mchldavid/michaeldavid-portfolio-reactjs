@@ -1,32 +1,100 @@
 import "./home.scss"
 import MyLinks from "../../svg/MyLinks"
+import { useEffect } from "react"
 
 const Home = () => {
+  const AnimateTitle = (elementClass, delay) => {
+    const title = document.querySelector(elementClass)
+    console.log(title.innerText.split(""))
+
+    const textArr = title.innerText.split("")
+
+    // reset text
+    title.textContent = ""
+
+    textArr.forEach((letters) => {
+      let div = document.createElement("div")
+      div.innerHTML = letters
+      title.appendChild(div)
+    })
+
+    const getText = document.querySelectorAll(elementClass + " div")
+    getText.forEach((el) => {
+      setTimeout(function () {
+        el.classList.add("animate-text")
+        el.style.opacity = "1"
+      }, delay)
+      delay += 100
+    })
+  }
+
+  useEffect(() => {
+    document.querySelector(".name").style.opacity=1
+    AnimateTitle(".text1", 1300)
+    AnimateTitle(".text2", 2000)
+  })
+
   return (
     <>
       <section className="home-section">
         <div className="left-grid">
-          <div>
-            Nice to meet you <span>👋</span>, I am
+          <div
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
+            Nice to meet you <span className="wave">👋</span>, I am
           </div>
+
           <div>
-            <h1>
-              Michael <span>David</span>
+            <h1
+              className="name"
+              data-aos-delay="1000"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-once="true"
+            >
+              <div className="text1">Michael </div>
+              <div className="text2">David</div>
             </h1>
           </div>
-          <p>
+          <p
+            data-aos="fade-right"
+            data-aos-delay="2350"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
             Thank you for visiting. I am a developer specializing in front-end
             and back-end in web and mobile applications using Outsystems in the
             low-code platforms and now I found myself studying in ReactJS
           </p>
 
-          <h4>Front End Web Developer</h4>
+          <div
+            className="roles"
+            data-aos="fade-right"
+            data-aos-delay="2450"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
+            <h4>Web & Mobile Developer</h4>
+          </div>
 
-          <MyLinks />
+          <MyLinks delay={2650} />
         </div>
 
         <div className="right-grid">
-          <div className="radius">
+          <div
+            className="radius"
+            data-aos="fade-left"
+            data-aos-delay="2500"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
             <div className="radius">
               <img
                 className="filter-sepia"

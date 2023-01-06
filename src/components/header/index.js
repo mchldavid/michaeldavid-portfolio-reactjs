@@ -39,8 +39,6 @@ const Navbar = () => {
     }
   }
 
-  
-
   useEffect(() => {
     const listNav = document.querySelectorAll("nav ul li")
     const indicator = document.querySelector(".indicator")
@@ -117,14 +115,28 @@ const Navbar = () => {
       <section id="home"></section>
       <header className="header">
         <div className="header-content">
-          <div className="logo" onClick={(e) => {scrollSmoothTransition(e, "#home")}}>
-              <MyLogo />
+          <div
+            className="logo"
+            data-aos="fade-down"
+            data-aos-once="true"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            onClick={(e) => {
+              scrollSmoothTransition(e, "#home")
+            }}
+          >
+            <MyLogo />
           </div>
           <nav>
             <button
               className="toggle-menu"
               aria-controls="navigation"
               aria-expanded="false"
+              data-aos="fade-down"
+              data-aos-once="true"
+              data-aos-delay="200"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
               onClick={() => {
                 toggleMenu(false)
               }}
@@ -134,21 +146,51 @@ const Navbar = () => {
             </button>
             <ul id="navigation" data-visible="false" className="navigation">
               <div className="indicator"></div>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-once="true"
+                data-aos-delay="200"
+                data-aos-duration="800"
+                data-aos-easing="ease-out-back"
+              >
                 <a href="#home" className="active">
                   Home
                 </a>
               </li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-once="true"
+                data-aos-delay="300"
+                data-aos-duration="800"
+                data-aos-easing="ease-out-back"
+              >
                 <a href="#project">Project</a>
               </li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-once="true"
+                data-aos-delay="400"
+                data-aos-duration="800"
+                data-aos-easing="ease-out-back"
+              >
                 <a href="#experience">Experience</a>
               </li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-once="true"
+                data-aos-delay="500"
+                data-aos-duration="800"
+                data-aos-easing="ease-out-back"
+              >
                 <a href="#about">About</a>
               </li>
-              <li>
+              <li
+                data-aos="fade-down"
+                data-aos-once="true"
+                data-aos-delay="600"
+                data-aos-duration="800"
+                data-aos-easing="ease-out-back"
+              >
                 <a href="#contact">Contact</a>
               </li>
             </ul>
