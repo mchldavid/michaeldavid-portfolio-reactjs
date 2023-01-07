@@ -8,7 +8,7 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaGit,
-  FaFigma
+  FaFigma,
 } from "react-icons/fa"
 import { DiJavascript1, DiMysql } from "react-icons/di"
 import { SiCsharp } from "react-icons/si"
@@ -20,33 +20,89 @@ const About = () => {
         <section id="about" className="about-section">
           <div className="grid">
             <div className="left-section">
-              <h2>
-                About <span>me</span>
-              </h2>
-              <p>Welcome, I am MICHAEL DAVID</p>
-              <p>
+              <div
+                data-aos="fade-right"
+                data-aos-delay="0"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
+                <h2>
+                  About <span>me</span>
+                </h2>
+              </div>
+
+              <p
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
+                Welcome, I am MICHAEL DAVID
+              </p>
+              <p
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
                 After graduating with a bachelor's degree in Information
                 Technology, I started my journey as an OutSystems developer
                 based in the Philippines. I am a mature team worker and
                 adaptable to all challenging situations and a great team player.
               </p>
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
                 And I'm also interested in designing by making it responsive and
                 comfortable to use through the applications I develop.
               </p>
-              <p>Now I am focusing on studying ReactJS.</p>
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-delay="500"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
+                Now I am focusing on studying ReactJS.
+              </p>
+              <p
+                data-aos="fade-right"
+                data-aos-delay="600"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
                 If you're interested in connecting with me, send me a message
                 below!
               </p>
             </div>
 
             <div className="right-section">
-              <div>
+              <div
+                data-aos="fade-right"
+                data-aos-delay="0"
+                data-aos-duration="800"
+                data-aos-easing="ease-out"
+                data-aos-once="true"
+              >
                 <h4>Skills & Technologies</h4>
               </div>
               <div className="tech-icons-grid">
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <svg
                     id="Layer_1"
                     data-name="Layer 1"
@@ -60,43 +116,113 @@ const About = () => {
                   </svg>
                   <div className="icon-label">Outsystems</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaReact />
                   <div className="icon-label">ReactJS</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="500"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaNodeJs />
                   <div className="icon-label">NodeJS</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="600"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <DiJavascript1 />
                   <div className="icon-label">Javascript</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="700"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaSass />
                   <div className="icon-label">Sass</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="800"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaCss3Alt />
                   <div className="icon-label">Css</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="900"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaHtml5 />
                   <div className="icon-label">HTML5</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="1000"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <SiCsharp />
                   <div className="icon-label">Csharp</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="1100"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <DiMysql />
                   <div className="icon-label">MySQL</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="1200"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaGit />
                   <div className="icon-label">Git</div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  data-aos="zoom-in"
+                  data-aos-delay="1300"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-back"
+                  data-aos-once="true"
+                >
                   <FaFigma />
                   <div className="icon-label">Figma</div>
                 </div>

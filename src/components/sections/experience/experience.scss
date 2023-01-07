@@ -67,6 +67,7 @@
           align-items: center;
         }
 
+        
         & .line-horizontal {
           background-color: $color-1;
           width: 50px;
@@ -127,7 +128,7 @@
               order: 1;
             }
 
-            & .line-horizontal {
+            & div{
               order: 0;
             }
 
@@ -172,7 +173,7 @@
               order: 0;
             }
 
-            & .line-horizontal {
+            & div {
               order: 1;
             }
 

@@ -10,27 +10,41 @@ import "react-toastify/dist/ReactToastify.css"
 const Contact = () => {
   const emojis = ["😁", "🤓", "😎", "🤗", "🧐", "😇", "👌", "👋", "🤟"]
 
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("david.michael15.md@gmail.com")
+    toast(
+      `${emojis[Math.floor(Math.random() * emojis.length)]} Email Copied!`,
+      {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      }
+    )
+  }
+
   useEffect(() => {
-    const span = document.querySelector(".email-copy")
-
-    span.onclick = function (event) {
-      console.log(Math.random())
-      navigator.clipboard.writeText("david.michael15.md@gmail.com")
-      toast(
-        `${emojis[Math.floor(Math.random() * emojis.length)]} Email Copied!`,
-        {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          progress: undefined,
-          theme: "light",
-        }
-      )
-    }
-
+    // const span = document.querySelector(".email-copy")
+    // span.onclick = function () {
+    //   navigator.clipboard.writeText("david.michael15.md@gmail.com")
+    //   toast(
+    //     `${emojis[Math.floor(Math.random() * emojis.length)]} Email Copied!`,
+    //     {
+    //       position: "top-center",
+    //       autoClose: 3000,
+    //       hideProgressBar: false,
+    //       closeOnClick: true,
+    //       pauseOnHover: false,
+    //       draggable: false,
+    //       progress: undefined,
+    //       theme: "light",
+    //     }
+    //   )
+    // }
     // span.addEventListener("copy", function (event) {
     //   event.preventDefault()
     //   if (event.clipboardData) {
@@ -47,21 +61,44 @@ const Contact = () => {
     <>
       <div className="contact-bg">
         <section id="contact" className="contact-section">
-          <h2>
-            Let's <span>Work Together</span>
-          </h2>
-          <h4 className="my-email">
-            <a href="mailto:david.michael15.md@gmail.com">
-              <span title="david.michael15.md@gmail.com">david.michael15.md@gmail.com</span>
-              <div className="send-email">
-                david.michael15.md@gmail.com
-                <FiSend />
-              </div>
-            </a>
-            <span className="email-copy" title="Copy Email">
-              <AiOutlineCopy />
-            </span>
-          </h4>
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="0"
+            data-aos-duration="500"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
+            <h2>
+              Let's <span>Work Together</span>
+            </h2>
+          </div>
+
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-aos-duration="500"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
+            <h4 className="my-email">
+              <a href="mailto:david.michael15.md@gmail.com">
+                <span title="david.michael15.md@gmail.com">
+                  david.michael15.md@gmail.com
+                </span>
+                <div className="send-email">
+                  david.michael15.md@gmail.com
+                  <FiSend />
+                </div>
+              </a>
+              <span
+                className="email-copy"
+                title="Copy Email"
+                onClick={handleCopyEmail}
+              >
+                <AiOutlineCopy />
+              </span>
+            </h4>
+          </div>
 
           <MyLinks />
         </section>

@@ -15,9 +15,18 @@ const Projects = () => {
         </div>
 
         <section id="project" className="project-section">
-          <h2>
-            My <span>Projects</span>
-          </h2>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-aos-duration="800"
+            data-aos-easing="ease-out"
+            data-aos-once="true"
+          >
+            <h2>
+              My <span>Projects</span>
+            </h2>
+          </div>
+
           <div className="project-list-grid">
             <ProjectItem
               image={
@@ -28,7 +37,12 @@ const Projects = () => {
               description="My personal website"
               technology={["ReactJS", "Sass", "Figma"]}
               test={<BsGithub />}
-              links={<a href="https://github.com/mchldavid/michaeldavid-portfolio-reactjs"><BsGithub /></a>}
+              links={
+                <a href="https://github.com/mchldavid/michaeldavid-portfolio-reactjs">
+                  <BsGithub />
+                </a>
+              }
+              delay={200}
             />
             <ProjectItem
               image={
@@ -38,7 +52,12 @@ const Projects = () => {
               title="PUPSMB Class Scheduling"
               description="Undergrad thesis: A computer-aided system that will produce a schedule while monitoring all the possible conflicts during the process of class scheduling."
               technology={["Csharp"]}
-              links={<a href="https://github.com/mchldavid/pupsmb-class-scheduling"><BsGithub /></a>}
+              links={
+                <a href="https://github.com/mchldavid/pupsmb-class-scheduling">
+                  <BsGithub />
+                </a>
+              }
+              delay={200}
             />
           </div>
         </section>

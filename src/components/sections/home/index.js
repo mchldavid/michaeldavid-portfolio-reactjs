@@ -29,7 +29,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    document.querySelector(".name").style.opacity=1
+    document.querySelector(".name").style.opacity = 1
     AnimateTitle(".text1", 1300)
     AnimateTitle(".text2", 2000)
   })
@@ -117,10 +117,25 @@ const Home = () => {
         </div>
 
         <section className="whatido-section">
-          <h1>
+          <h1
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="0"
+            data-aos-duration="800"
+            data-aos-easing="ease-out"
+            data-aos-once="true"
+          >
             What <span>I do?</span>
           </h1>
-          <div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="0"
+            data-aos-duration="800"
+            data-aos-easing="ease-out"
+            data-aos-once="true"
+          >
             <div className="cube radius"></div>
             <h6>
               I’ve been coding professionally for 3 years as a systems

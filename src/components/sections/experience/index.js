@@ -5,19 +5,51 @@ const Experience = () => {
     <>
       <div className="experience-bg">
         <section id="experience" className="experience-section">
-          <h2>
-            My <span>Experience</span>
-          </h2>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-aos-duration="800"
+            data-aos-easing="ease-out"
+            data-aos-once="true"
+          >
+            <h2>
+              My <span>Experience</span>
+            </h2>
+          </div>
 
           <ul className="list">
             <li className="list-item">
               <div className="format-odd">
                 <div className="left-content">
-                  <div className="calendar-year">2022</div>
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
+                    <div className="calendar-year">2022</div>
+                  </div>
                 </div>
                 <div className="right-content">
-                <div className="line-horizontal"></div>
-                  <div className="panel radius">
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
+                    <div className="line-horizontal"></div>
+                  </div>
+
+                  <div
+                    className="panel radius"
+                    data-aos="zoom-in"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
                     <div className="logo">
                       <img
                         src={
@@ -28,7 +60,9 @@ const Experience = () => {
                     </div>
                     <div className="descriptions">
                       <div className="years">Jun 2019 - Mar 2022</div>
-                      <div className="title">Systems Development Specialists</div>
+                      <div className="title">
+                        Systems Development Specialists
+                      </div>
                       <div className="company-name">
                         Transnational E-Business Solutions Inc.
                       </div>
@@ -39,11 +73,35 @@ const Experience = () => {
 
               <div className="format-even">
                 <div className="left-content">
-                  <div className="calendar-year">2019</div>
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
+                    <div className="calendar-year">2019</div>
+                  </div>
                 </div>
                 <div className="right-content">
-                <div className="line-horizontal"></div>
-                  <div className="panel radius">
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
+                    <div className="line-horizontal"></div>
+                  </div>
+
+                  <div
+                    className="panel radius"
+                    data-aos="zoom-in"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-back"
+                    data-aos-once="true"
+                  >
                     <div className="logo">
                       <img
                         src={
@@ -64,7 +122,15 @@ const Experience = () => {
                 </div>
               </div>
             </li>
-            <div className="line-vertical"></div>
+
+            <div
+              className="line-vertical"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              data-aos-easing="ease-out-back"
+              data-aos-once="true"
+            ></div>
           </ul>
         </section>
 
