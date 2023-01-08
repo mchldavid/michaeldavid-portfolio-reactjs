@@ -1,15 +1,12 @@
 import { useEffect } from "react"
 
 //component
-import ParticlesBG from "../particles/Particles-app"
+// import ParticlesBG from "../particles/Particles-app"
 import Home from "./home"
 import About from "./about"
 import Projects from "./projects"
 import Experience from "./experience"
 import Contact from "./contact"
-
-//exported from sass variables
-import sass_colors from "../../abstract/_colors.module.scss"
 
 import "./main.scss"
 
@@ -34,13 +31,12 @@ const Main = () => {
 
   return (
     <main>
-      <ParticlesBG
+      {/* <ParticlesBG
         id={topClassParticlesID}
         color={sass_colors.color2}
         linkedColor={sass_colors.color2}
         bgColor={sass_colors.color1}
-      />
-      <div className="bottomClassParticleID"></div>
+      /> */}
       <Home />
       <Projects />
       <Experience />
