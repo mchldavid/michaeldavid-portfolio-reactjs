@@ -10,13 +10,14 @@ import MyLogo from "../svg/MyLogo"
 
 const Navbar = () => {
   const indicatorMovement = (indicator, aLink) => {
-    const navRectX = document.querySelector("nav").getBoundingClientRect().x
 
-    indicator.style.transform = `translateX(${
-      aLink.getBoundingClientRect().x - navRectX - 5
-    }px)`
+    // const navRectX = document.querySelector("nav").getBoundingClientRect().x
 
-    indicator.style.width = `${aLink.offsetWidth + 10}px`
+    // indicator.style.transform = `translateX(${
+    //   aLink.getBoundingClientRect().x - navRectX - 5
+    // }px)`
+
+    // indicator.style.width = `${aLink.offsetWidth + 10}px`
   }
 
   //for menu toggle
