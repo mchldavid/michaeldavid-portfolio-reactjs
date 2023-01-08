@@ -41,12 +41,6 @@ const Main = () => {
         bgColor={sass_colors.color1}
       />
       <div className="bottomClassParticleID"></div>
-      {/* <ParticlesBG
-        id={bottomClassParticlesID}
-        color={sass_colors.color2}
-        linkedColor={sass_colors.color2}
-        bgColor={sass_colors.color1}
-      /> */}
       <Home />
       <Projects />
       <Experience />

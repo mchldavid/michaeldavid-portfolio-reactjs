@@ -106,7 +106,7 @@ const Experience = () => {
                       <img
                         src={
                           window.location.origin +
-                          "/assets/logo/shoppetown-logo.jpg"
+                          "/assets/logo/shoppetown-logo.png"
                         }
                         alt=""
                       ></img>

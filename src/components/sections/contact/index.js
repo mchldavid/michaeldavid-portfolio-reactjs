@@ -2,7 +2,6 @@ import "./contact.scss"
 import MyLinks from "../../svg/MyLinks"
 import { AiOutlineCopy } from "react-icons/ai"
 import { FiSend } from "react-icons/fi"
-import { useEffect } from "react"
 import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
@@ -26,36 +25,6 @@ const Contact = () => {
       }
     )
   }
-
-  useEffect(() => {
-    // const span = document.querySelector(".email-copy")
-    // span.onclick = function () {
-    //   navigator.clipboard.writeText("david.michael15.md@gmail.com")
-    //   toast(
-    //     `${emojis[Math.floor(Math.random() * emojis.length)]} Email Copied!`,
-    //     {
-    //       position: "top-center",
-    //       autoClose: 3000,
-    //       hideProgressBar: false,
-    //       closeOnClick: true,
-    //       pauseOnHover: false,
-    //       draggable: false,
-    //       progress: undefined,
-    //       theme: "light",
-    //     }
-    //   )
-    // }
-    // span.addEventListener("copy", function (event) {
-    //   event.preventDefault()
-    //   if (event.clipboardData) {
-    //     event.clipboardData.setData(
-    //       "text/plain",
-    //       "david.michael15.md@gmail.com"
-    //     )
-    //     console.log("copied text", event.clipboardData.getData("text"))
-    //   }
-    // })
-  }, [])
 
   return (
     <>
