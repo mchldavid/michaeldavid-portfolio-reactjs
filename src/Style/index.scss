@@ -8,6 +8,10 @@
 // Font Variables
 $roboto: "Roboto", sans-serif;
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Styles
 body {
   font-family: $roboto;
