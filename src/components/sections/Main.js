@@ -16,20 +16,20 @@ import "./main.scss"
 const Main = () => {
   const topClassParticlesID = "particles-container-top"
 
-  // const winListen = () => {
-  //   const cnvsParticle1 = document.querySelector(`#${topClassParticlesID}`)
+  const winListen = () => {
+    const cnvsParticle1 = document.querySelector(`#${topClassParticlesID}`)
 
-  //   window.addEventListener("scroll", () => {
-  //     let value = window.scrollY
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY
 
-  //     //move the Y particles1 to make parallax effect
-  //     cnvsParticle1.style.transform = `translateY(-${value / 30}px)`
+      //move the Y particles1 to make parallax effect
+      cnvsParticle1.style.transform = `translateY(-${value / 30}px)`
 
-  //   })
-  // }
+    })
+  }
 
   useEffect(() => {
-    // winListen()
+    winListen()
   }, [])
 
   return (
