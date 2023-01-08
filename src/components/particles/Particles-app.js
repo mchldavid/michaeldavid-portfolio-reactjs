@@ -19,15 +19,14 @@ const ParticlesBG = (props) => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container) => {
-  }, [])
+  // const particlesLoaded = useCallback(async (container) => {
+  // }, [])
 
   return (
     <>
       <Particles
         id={props.id}
         init={particlesInit}
-        loaded={particlesLoaded}
         options={prtcls}
       />
     </>
