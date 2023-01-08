@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 const Contact = () => {
-  const emojis = ["😁", "🤓", "😎", "🤗", "🧐", "😇", "👌", "👋", "🤟"]
+  const emojis = ["😁", "🤓", "😎", "🤗", "🧐", "😇", "👌", "👋", "🤟", "🤝"]
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("david.michael15.md@gmail.com")

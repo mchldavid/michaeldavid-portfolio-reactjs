@@ -30,7 +30,7 @@ const Projects = () => {
           <div className="project-list-grid">
             <ProjectItem
               image={
-                window.location.origin + "/assets/pictures/sample-photo-1.jpg"
+                window.location.origin + "/assets/pictures/project-thumbnail-01.jpg"
               }
               no="#01"
               title="My Portfolio"
@@ -46,7 +46,7 @@ const Projects = () => {
             />
             <ProjectItem
               image={
-                window.location.origin + "/assets/pictures/sample-photo-1.jpg"
+                window.location.origin + "/assets/pictures/project-thumbnail-02.jpg"
               }
               no="#02"
               title="PUPSMB Class Scheduling"

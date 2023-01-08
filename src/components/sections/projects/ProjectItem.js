@@ -11,7 +11,7 @@ const ProjectItem = (props) => {
       >
         <div className="project-item radius">
           <div className="top-container">
-            <img className="filter-sepia" src={props.image} alt="" />
+            <img className="" src={props.image} alt="" />
             <div className="gradient"></div>
 
             <div className="top-details">

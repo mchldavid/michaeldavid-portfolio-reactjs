@@ -97,9 +97,9 @@ const Home = () => {
           >
             <div className="radius">
               <img
-                className="filter-sepia"
+                className=""
                 src={
-                  window.location.origin + "/assets/pictures/sample-photo-1.jpg"
+                  window.location.origin + "/assets/pictures/myphoto.jpg"
                 }
                 alt=""
               />

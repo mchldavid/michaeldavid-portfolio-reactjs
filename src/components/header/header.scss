@@ -167,6 +167,12 @@
           align-items: center;
           flex-direction: column;
           opacity: 0;
+
+          & li {
+            & a{
+              pointer-events: none;
+            }
+          }
         }
 
         & .navigation[data-visible="true"] {
