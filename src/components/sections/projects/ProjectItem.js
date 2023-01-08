@@ -1,5 +1,4 @@
 const ProjectItem = (props) => {
-  console.log("image", props.image)
   return (
     <>
       <div
@@ -40,6 +39,7 @@ const ProjectItem = (props) => {
                 {props.technology &&
                   props.technology.map((tech, idx) => (
                     <div
+                      key={idx}
                       data-aos="zoom-in"
                       data-aos-delay={props.delay + 900 + idx * 100}
                       data-aos-duration="400"

@@ -5,7 +5,6 @@ import { useEffect } from "react"
 const Home = () => {
   const AnimateTitle = (elementClass, delay) => {
     const title = document.querySelector(elementClass)
-    console.log(title.innerText.split(""))
 
     const textArr = title.innerText.split("")
 
@@ -68,8 +67,8 @@ const Home = () => {
             data-aos-once="true"
           >
             Thank you for visiting. I am a developer specializing in front-end
-            and back-end in web and mobile applications using Outsystems in the
-            low-code platforms and now I found myself studying in ReactJS
+            and back-end on web and mobile applications using Outsystems in
+            low-code platforms. Now I have found myself studying ReactJS.
           </p>
 
           <div
@@ -98,9 +97,7 @@ const Home = () => {
             <div className="radius">
               <img
                 className=""
-                src={
-                  window.location.origin + "/assets/pictures/myphoto.jpg"
-                }
+                src={window.location.origin + "/assets/pictures/myphoto.jpg"}
                 alt=""
               />
             </div>
@@ -138,8 +135,8 @@ const Home = () => {
           >
             <div className="cube radius"></div>
             <h6>
-              I’ve been coding professionally for 3 years as a systems
-              developmennt specialist that focuses in customizable solutions
+              I’ve been coding professionally for three years as a Systems
+              Development Specialist, focusing on customizable solutions.
             </h6>
           </div>
         </section>

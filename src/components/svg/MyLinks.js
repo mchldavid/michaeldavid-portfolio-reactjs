@@ -7,7 +7,6 @@ import { FaLinkedinIn } from "react-icons/fa"
 
 const MyLinks = (props) => {
   var delayValue = props.delay||0
-  console.log(delayValue, "delay")
   const getDelayValue = () => {
     return (delayValue += 100)
   }

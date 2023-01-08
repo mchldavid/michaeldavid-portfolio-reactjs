@@ -48,10 +48,10 @@ const About = () => {
                 data-aos-easing="ease-out"
                 data-aos-once="true"
               >
-                After graduating with a bachelor's degree in Information
-                Technology, I started my journey as an OutSystems developer
-                based in the Philippines. I am a mature team worker and
-                adaptable to all challenging situations and a great team player.
+                After obtaining my Bachelor's Degree in Information Technology,
+                I started my journey as an OutSystems developer based in the
+                Philippines. I am a great team player and an independent worker
+                that can adapt to all challenging situations.
               </p>
               <p
                 data-aos="fade-right"
@@ -60,8 +60,8 @@ const About = () => {
                 data-aos-easing="ease-out"
                 data-aos-once="true"
               >
-                And I'm also interested in designing by making it responsive and
-                comfortable to use through the applications I develop.
+                In addition, I am into web designing by making it a responsive
+                and user friendly through the applications I develop.
               </p>
               <p
                 data-aos="fade-right"
@@ -70,7 +70,7 @@ const About = () => {
                 data-aos-easing="ease-out"
                 data-aos-once="true"
               >
-                Now I am focusing on studying ReactJS.
+                Currently, I am focusing on studying ReactJS.
               </p>
               <p
                 data-aos="fade-right"
