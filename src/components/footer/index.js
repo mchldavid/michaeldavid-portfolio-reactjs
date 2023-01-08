@@ -18,15 +18,16 @@ const Footer = () => {
               <span> ReactJS</span>
             </div>
             <div>
-              <span>Copyright © 2023 </span>
+              <span>© 2023 </span>
               <span
                 className="author"
                 onClick={(e) => {
                   scrollSmoothTransition(e, "#home")
                 }}
               >
-                Michael David
+                Michael David.
               </span>
+              <span> All Rights Reserved</span>
             </div>
           </div>
         </footer>

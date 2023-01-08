@@ -67,6 +67,11 @@
           align-items: center;
         }
 
+        & .panel:hover{
+          transform: scale(1.05);
+          cursor: default;
+        }
+
         
         & .line-horizontal {
           background-color: $color-1;

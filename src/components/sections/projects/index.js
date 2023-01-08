@@ -33,8 +33,8 @@ const Projects = () => {
                 window.location.origin + "/assets/pictures/project-thumbnail-01.jpg"
               }
               no="#01"
-              title="My Portfolio"
-              description="My personal website"
+              title="Portfolio"
+              description="My portfolio website."
               technology={["ReactJS", "Sass", "Figma"]}
               test={<BsGithub />}
               links={
