@@ -23,8 +23,6 @@ body {
   box-sizing: border-box;
   color: $color-0;
   transition: height $anim-time ease, position $anim-time ease;
-
-  
 }
 
 p {
@@ -79,7 +77,38 @@ a {
   text-decoration: none;
 }
 
+button {
+  background: rgba($color-0, 0);
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid $color-0;
+  color: $color-0;
+  cursor: pointer;
+  transition: $anim-all;
+  
+}
 
+.primary{
+  background: rgba($color-2, 1);
+  border: 1px solid $color-2;
+  color: $color-0;
+}
+
+.primary:hover{
+  opacity: 0.8;
+  background-color: rgba($color-2, 1);
+  border-color: $color-2;
+  color: $color-1;
+}
+
+button:hover {
+  background: rgba($color-0, 1);
+  border-color: $color-0;
+  color: $color-1;
+}
 
 // toast overides
 :root {

@@ -7,12 +7,13 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 const Contact = () => {
-  const emojis = ["😁", "🤓", "😎", "🤗", "🧐", "😇", "👌", "👋", "🤟", "🤝"]
+  const emojis = ["😁", "😎", "🤗", "🧐", "😇", "👌", "👋", "🤟", "🤝"]
+  const myEmailAddress = "david.michael15.md@gmail.com"
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("david.michael15.md@gmail.com")
+    navigator.clipboard.writeText(myEmailAddress)
     toast(
-      `${emojis[Math.floor(Math.random() * emojis.length)]} Email Copied!`,
+      `${emojis[Math.floor(Math.random() * emojis.length)]} Email successfully Copied.`,
       {
         position: "top-center",
         autoClose: 3000,
@@ -50,12 +51,12 @@ const Contact = () => {
             data-aos-once="true"
           >
             <h4 className="my-email">
-              <a href="mailto:david.michael15.md@gmail.com">
-                <span title="david.michael15.md@gmail.com">
+              <a href={"mailto:" + myEmailAddress}>
+                <span title={myEmailAddress}>
                   david.michael15.md@gmail.com
                 </span>
                 <div className="send-email">
-                  david.michael15.md@gmail.com
+                  {myEmailAddress}
                   <FiSend />
                 </div>
               </a>

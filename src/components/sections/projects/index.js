@@ -38,7 +38,7 @@ const Projects = () => {
               technology={["ReactJS", "Sass", "Figma"]}
               test={<BsGithub />}
               links={
-                <a href="https://github.com/mchldavid/michaeldavid-portfolio-reactjs">
+                <a href="https://github.com/mchldavid/michaeldavid-portfolio-reactjs" title="Github">
                   <BsGithub />
                 </a>
               }
@@ -53,7 +53,7 @@ const Projects = () => {
               description="Undergrad thesis: A computer-aided system that will produce a schedule while monitoring all the possible conflicts during the process of class scheduling."
               technology={["Csharp"]}
               links={
-                <a href="https://github.com/mchldavid/pupsmb-class-scheduling">
+                <a href="https://github.com/mchldavid/pupsmb-class-scheduling" title="Github">
                   <BsGithub />
                 </a>
               }

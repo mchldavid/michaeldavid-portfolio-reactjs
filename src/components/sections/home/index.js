@@ -1,6 +1,7 @@
 import "./home.scss"
 import MyLinks from "../../svg/MyLinks"
 import { useEffect } from "react"
+// import resumePDF from "../../../files/michael-david-resume.pdf"
 
 const Home = () => {
   const AnimateTitle = (elementClass, delay) => {
@@ -25,6 +26,15 @@ const Home = () => {
       }, delay)
       delay += 100
     })
+  }
+
+  const handleGetInTouch = () => {
+    window.location.href = "mailto:david.michael15.md@gmail.com";
+  }
+
+  //open pdf in a new tab
+  const handleDownloadResume = () => {
+    window.open("assets/files/michael-david-resume.pdf", "_blank").focus()
   }
 
   useEffect(() => {
@@ -83,6 +93,16 @@ const Home = () => {
           </div>
 
           <MyLinks delay={2650} />
+          <div
+            data-aos="fade-right"
+            data-aos-delay="2700"
+            data-aos-duration="800"
+            data-aos-easing="ease-out-back"
+            data-aos-once="true"
+          >
+            <button className="primary" onClick={handleGetInTouch}>Get in Touch</button>
+            <button className="resume" onClick={handleDownloadResume}>Download Resume</button>
+          </div>
         </div>
 
         <div className="right-grid">
