@@ -73,7 +73,7 @@ const ProjectItem = (props) => {
                 data-aos-easing="ease-out"
                 data-aos-once="true"
               >
-                {props.links}
+                {props.links.map((val, id) => <a href={val.href} key={id}>{val.icon}</a>)}
               </div>
             </div>
           </div>

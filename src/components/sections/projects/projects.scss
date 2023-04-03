@@ -71,7 +71,7 @@
             }
 
             & .title {
-              font-size: 2.0rem;
+              font-size: 2rem;
               font-weight: 900;
               color: $color-0;
               transition: $anim-all;
@@ -106,22 +106,19 @@
             color: $color-4;
           }
 
-          & .links{
+          & .links {
             display: flex;
             justify-content: flex-end;
             font-size: 1.5rem;
+            gap: 10px;
 
-            & a{
+            & a {
               transition: $anim-all;
             }
-          }
-
-          & .links{
 
             & a:hover {
               color: $color-2;
             }
-
           }
         }
       }
