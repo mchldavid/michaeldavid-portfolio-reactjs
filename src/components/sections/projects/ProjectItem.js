@@ -1,4 +1,9 @@
+import { BsGithub } from "react-icons/bs"
+import { GoLinkExternal } from "react-icons/go"
+
 const ProjectItem = (props) => {
+  const icons = { github: <BsGithub />, external: <GoLinkExternal /> }
+
   return (
     <>
       <div
@@ -7,6 +12,7 @@ const ProjectItem = (props) => {
         data-aos-duration="800"
         data-aos-easing="ease-out"
         data-aos-once="true"
+        
       >
         <div className="project-item radius">
           <div className="top-container">
@@ -73,7 +79,11 @@ const ProjectItem = (props) => {
                 data-aos-easing="ease-out"
                 data-aos-once="true"
               >
-                {props.links.map((val, id) => <a href={val.href} key={id}>{val.icon}</a>)}
+                {props.links.map((val, id) => (
+                  <a href={val.href} key={id}>
+                    {icons[val.icon]}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

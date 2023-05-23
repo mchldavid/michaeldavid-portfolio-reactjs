@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import ParticlesBG from "../particles/Particles-app"
 import Home from "./home"
 import About from "./about"
-import Projects from "./projects"
+import Projects from "./projects/"
 import Experience from "./experience"
 import Contact from "./contact"
 
