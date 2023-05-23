@@ -58,7 +58,7 @@ const Projects = () => {
                 window.location.origin +
                 "/assets/pictures/project-thumbnail-01.jpg"
               }
-              no="#01"
+              no="#02"
               title="Portfolio"
               description="🚀 My Website Portfolio made in ReactJS. 🌟 Showcases my skills and projects in a clean and modern design. With an intuitive interface, visitors can easily navigate and view my work, read about my experience and skills, and get in touch with me through a contact form. The website is fully responsive, ensuring it looks great on all devices."
               technology={["ReactJS", "Sass", "Figma"]}
@@ -76,7 +76,7 @@ const Projects = () => {
                 window.location.origin +
                 "/assets/pictures/project-thumbnail-02.jpg"
               }
-              no="#02"
+              no="#03"
               title="PUPSMB Class Scheduling"
               description="Undergrad thesis: A computer-aided system that will produce a schedule while monitoring all the possible conflicts during the process of class scheduling."
               technology={["Csharp"]}
@@ -85,6 +85,30 @@ const Projects = () => {
                   href: "https://github.com/mchldavid/pupsmb-class-scheduling",
                   icon: <BsGithub />,
                   title: "Github",
+                },
+              ]}
+              delay={200}
+            />
+
+            <ProjectItem
+              image={
+                window.location.origin +
+                "/assets/pictures/project-thumbnail-04.png"
+              }
+              no="#04"
+              title="Calendar App"
+              description="📆 Calendar App is a simple application that helps you keep track of your appointments and important dates. With this app, you can easily add, view, and delete your appointments."
+              technology={["ReactJS", "Tailwind"]}
+              links={[
+                {
+                  href: "https://github.com/mchldavid/calendar-app-md-fe",
+                  icon: <BsGithub />,
+                  title: "Github",
+                },
+                {
+                  href: "https://calendar-app-md-fe.vercel.app/",
+                  icon: <GoLinkExternal />,
+                  title: "Calendar App",
                 },
               ]}
               delay={200}
