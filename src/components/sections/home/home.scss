@@ -148,6 +148,7 @@
 
 .whatido-bg {
   position: relative;
+  height: 110px !important;
   @include set-background-color($color-1);
 
   & .curve {
@@ -171,7 +172,6 @@
   }
 
   & .whatido-section {
-    min-height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;

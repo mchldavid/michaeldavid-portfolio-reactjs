@@ -133,7 +133,7 @@ const Home = () => {
           </svg>
         </div>
 
-        <section className="whatido-section">
+        {/* <section className="whatido-section">
           <h1
             data-aos="fade-right"
             data-aos-offset="200"
@@ -159,7 +159,7 @@ const Home = () => {
               Development Specialist, focusing on customizable solutions.
             </h6>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   )

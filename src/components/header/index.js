@@ -78,6 +78,7 @@ const Navbar = () => {
 
       if (scrollTop > lastScrolltop) {
         header.style.top = `-${headerHeight}px`
+        // console.log("top: ", headerHeight);
       } else {
         header.style.top = 0
         if (scrollTop > headerHeight) {
