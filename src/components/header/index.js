@@ -164,7 +164,7 @@ const Navbar = () => {
                 data-aos-duration="800"
                 data-aos-easing="ease-out-back"
               >
-                <a href="#project">Project</a>
+                <a href="#project">Projects</a>
               </li>
               <li
                 data-aos="fade-down"
