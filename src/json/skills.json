@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Outsystems",
+    "icon": "outsystems"
+  },
+  {
+    "title": "ReactJS",
+    "icon": "reactjs"
+  },
+  {
+    "title": "NoteJs",
+    "icon": "nodejs"
+  },
+  {
+    "title": "Javascript",
+    "icon": "javascript"
+  },
+  {
+    "title": "Sass",
+    "icon": "sass"
+  },
+  {
+    "title": "Tailwind",
+    "icon": "tailwind"
+  },
+  {
+    "title": "CSS",
+    "icon": "css"
+  },
+  {
+    "title": "HTML5",
+    "icon": "html"
+  },
+  {
+    "title": "Csharp",
+    "icon": "csharp"
+  },
+  {
+    "title": "MySQL",
+    "icon": "mysql"
+  },
+  {
+    "title": "GIT",
+    "icon": "git"
+  },
+  {
+    "title": "Figma",
+    "icon": "figma"
+  }
+]

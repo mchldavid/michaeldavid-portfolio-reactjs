@@ -1,8 +1,6 @@
-import { BsGithub } from "react-icons/bs"
-import { GoLinkExternal } from "react-icons/go"
+import icons from "../../../list/icons"
 
 const ProjectItem = (props) => {
-  const icons = { github: <BsGithub />, external: <GoLinkExternal /> }
 
   return (
     <>
